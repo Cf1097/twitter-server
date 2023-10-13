@@ -1,4 +1,21 @@
 {
   "name": "twitter-server",
-  "packageManager": "yarn@4.0.0-rc.48"
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": " node build/index",
+    "build": " tsc -p .",
+    "dev": "tsc-watch --onSuccess \"npm  start && npm build\""
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.19",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.9.4",
+    "express": "^4.18.2",
+    "graphql": "^16.8.1"
+  }
 }
